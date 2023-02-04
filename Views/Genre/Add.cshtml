@@ -1,0 +1,18 @@
+﻿@model MovieStore.Models.Domains.Genre
+
+@{
+}
+
+<form asp-controller="Genre" asp-action="Add" method="post">
+    <h2>Add Genre</h2>
+    User Name <input asp-for="GenreName" type="text"/><br />
+    <span asp-validation-for="GenreName"></span>
+
+    @if (TempData["msg"] != null)
+    {
+            <div class="alert mb-1">
+            @TempData["msg"]
+            </div>
+    }
+    <button class="btn btn-primary" type="submit">Login</button>
+</form>
